@@ -23,6 +23,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Update
+        run: git submodule update --init --recursive
+  
       - name: Setup hugo
         uses: peaceiris/actions-hugo@v2
         with:
