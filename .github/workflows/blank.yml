@@ -27,7 +27,7 @@ jobs:
         run: |
           git submodule update --init --recursive
           cd public
-          git pull
+          git pull origin master
           cd ..
   
       - name: Setup hugo
