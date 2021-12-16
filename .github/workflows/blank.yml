@@ -43,4 +43,4 @@ jobs:
           git config --global user.email 'echo.wang21th@gmail.com'
           git add .
           git commit -m "commit change"
-          git push origin master
+          git push https://rechodeer21:${{secrets.TOKEN}}@github.com/rechodeer21/rechodeer21.github.io.git
