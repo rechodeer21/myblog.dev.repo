@@ -41,7 +41,6 @@ jobs:
           cd public
           git config --global user.name 'Echo Wang'
           git config --global user.email 'echo.wang21th@gmail.com'
-          git remote set-url origin https://x-access-token:${{ secrets.TOKEN }}@github.com/rechodeer21/rechodeer21.github.io
           git add .
           git commit -m "commit change"
           git push origin master
