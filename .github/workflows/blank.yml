@@ -34,12 +34,11 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.TOKEN }}
-          external_repository: rechodeer21/rechodeer21.github.io
-          publish_dir: ./public
-          #   keep_files: true
-          user_name: rechodeer21
-          user_email: echo.wang21th@gmail.com>
-          publish_branch: master
+        run: |
+          cd public
+          git config --global user.name 'Echo Wang'
+          git config --global user.email 'echo.wang21th@gmail.com'
+          git remote set-url origin https://x-access-token:${{ secrets.TOKEN }}@github.com/rechodeer21.github.io}
+          git add .
+          git commit -m "commit change"
+          git push
